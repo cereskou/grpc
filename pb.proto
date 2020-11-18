@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+//option go_package = "pb";
+
+service LocalService {
+    rpc BrowseForFolder(BrowseInfo) returns (Folder) {}
+    rpc Alive(Empty) returns (AliveResponse) {}
+}
+
+//Empty -
+message Empty {
+}
+
+//BrowseInfo -
+message BrowseInfo {
+    string title = 1;
+    string initialdir = 2;
+}
+
+//Folder - BrowseForFolder response
+message Folder {
+    string path = 1;
+}
+
+//AliveResponse - alive response
+message AliveResponse {
+    int32 processid = 1;
+    string homedir = 2;
+    string accesskey = 3;
+    string secretkey = 4;
+    string region = 5;
+}
