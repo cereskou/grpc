@@ -17,7 +17,8 @@ go get -u github.com/golang/protobuf/protoc-gen-go
 
 ## Development
 
-### Create .proto file
+### Create a .proto file
+**pb.proto**
 ```
 syntax = "proto3";
 
