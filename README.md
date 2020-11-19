@@ -62,6 +62,7 @@ protoc --go_out=plugins=grpc:pb pb.proto
 ```
 
 ## Server
+**main.go**
 ```
 	//new server
 	server := grpc.NewServer()
